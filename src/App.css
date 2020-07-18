@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  --primary: #88ccc9;
+  --color: #111;
+  --disabled: #ccc;
+  --bg: white;
+  --daySize: 64px;
+}
+
+.container {
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 2rem 3rem;
+  margin: 2rem 0;
+}
+
+.monthName {
+  padding: 8px 18px;
+  color: var(--primary);
+  border-radius: 20px;
+  border: 2px solid var(--primary);
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.dayName {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.day {
+  font-size: 1.7rem;
+  color: var(--color);
+  border: 1px solid var(--primary);
+  width: var(--daySize);
+  height: var(--daySize);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day.disabled {
+  color: var(--disabled);
+}
+
+.controls {
+  margin: 1rem 0;
+}
